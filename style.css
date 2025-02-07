@@ -1,0 +1,81 @@
+body {
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.random-letter {
+    margin: 1em auto 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    border: 4px solid #ddd;
+    border-radius: 16px;
+}
+
+.random-letter span {
+    font-size: 128px;
+    font-weight: bold;
+}
+
+.new-letter-button {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 16px 48px;
+    background-color: #0780ff;
+    border: 0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: 0;
+    margin: 0 auto 1em;
+    text-align: center;
+    appearance: none;
+    cursor: pointer;
+}
+
+.toggle-countries-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    margin: 0 auto 1em;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.toggle-countries-button svg:nth-child(2) {
+    display: none;
+}
+
+.countries-panel.EXPANDED .toggle-countries-button svg:nth-child(2) {
+    display: block;
+}
+
+.countries-panel.EXPANDED .toggle-countries-button svg:nth-child(1) {
+    display: none;
+}
+
+.countries {
+    max-width: 320px;
+    margin: 1.5em auto 4em;
+    display: none;
+    text-align: center;
+}
+
+.countries-panel.EXPANDED .countries {
+    display: block;
+}
+
+.countries p {
+    margin: 12px 0;
+}
