@@ -25,11 +25,12 @@ document.addEventListener('click', event => {
 
     const selectedCountries = countries.filter(country => country.independent && country.common_name.startsWith(letter));
 
-    console.log(selectedCountries)
-
     const countriesElement = document.querySelector('.countries');
 
     countriesElement.innerHTML = selectedCountries.map(c => `<p>${c.common_name}</p>`).join('');
+
+    const countriesToggleButtonLabel = document.querySelector('.label');
+    countriesToggleButtonLabel.textContent = `Countries (${selectedCountries.length})`;
 
 });
 
